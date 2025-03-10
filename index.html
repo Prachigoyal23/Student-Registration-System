@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="https://cdn0.iconfinder.com/data/icons/education-and-school-39/64/graduation-degree-man-school-education-1024.png">
+        <div>
+            <h1>Student Registration System</h1>
+            <p>Register and manage student details such as name, ID, email, and contact information.</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+     <nav>
+        <ul>
+            <li><a href="#registration">Register</a></li>
+            <li><a href="#studentList">Student List</a></li>
+        </ul>
+     </nav>
+
+
+    <section id="registration">
+
+        <!-- Form Section -->
+    <div class="form-container">
+        <h2>Register New Student</h2>
+        <form id="studentForm">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" required>
+
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" required>
+
+            <label for="emailId">Email ID:</label>
+            <input type="email" id="emailId" required>
+
+            <label for="contactNumber">Contact Number:</label>
+            <input type="text" id="contactNumber" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Image Section -->
+
+    <div class="Picture">
+        <img src="https://studyportals.com/app/uploads/2024/11/shutterstock_2484576879-640x560.jpg" alt="Students Image">
+    </div>
+
+</section>
+    <div class="display-container">
+        <h2>Registered Students</h2>
+        <div id="studentList"></div>
+    </div>
+    
+   
+</body>
+</html>
