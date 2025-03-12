@@ -100,6 +100,8 @@ nav ul li a:hover {
     width: 80%;
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 400px; /* Set the max height for the container */
+    overflow-y: auto;  /* Enable vertical scroll bar when content exceeds max height */
 }
 
 #registration{
@@ -144,37 +146,22 @@ button:hover {
     background: transparent;
 }
 
-#studentList {
-    max-height: 300px;
-    overflow-y: auto;
-    margin-top: 10px;
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.student-item {
-    background-color: #f9f9f9;
-    margin: 5px 0;
+th, td {
     padding: 10px;
-    border-radius: 5px;
+    text-align: left;
     border: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-
-.student-item button {
-    background-color: red;
-    border: none;
-    color: white;
-    padding: 5px;
-    border-radius: 3px;
-    cursor: pointer;
+th {
+    color: black;
 }
-
-.student-item button:hover {
-    background-color: #d32f2f;
-}
-
-
 
 
 

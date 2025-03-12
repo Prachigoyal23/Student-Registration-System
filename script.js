@@ -17,20 +17,23 @@ function loadStudentRecords() {
     const students = JSON.parse(localStorage.getItem("students")) || [];
 
     studentList.innerHTML = "";
-    // Loop through each student and dispplay their information
+    // Loop through each student and display their information
     students.forEach((student, index) => {
-        const studentDiv = document.createElement("div");
-        studentDiv.classList.add("student-item");
+        const row = document.createElement("tr");
 
-         // Create the HTML structure for each student item with Edit and Delete buttons
-        studentDiv.innerHTML = `
-            <span>${student.name} - ${student.studentId}</span>
-            <div>
+         //Create table cells for each student properly
+         row.innerHTML = `
+         <td>${student.name}</td>
+            <td>${student.studentId}</td>
+            <td>${student.emailId}</td>
+            <td>${student.contactNumber}</td>
+            <td>
                 <button onclick="editStudent(${index})">Edit</button>
                 <button onclick="deleteStudent(${index})">Delete</button>
-            </div>
-        `;
-        studentList.appendChild(studentDiv);
+            </td>
+            `;
+
+        studentList.appendChild(row);
     });
 }
 
