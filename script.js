@@ -50,6 +50,16 @@ function addStudent() {
     }
 
     const students = JSON.parse(localStorage.getItem("students")) || [];
+
+    // Check if the student ID already exists
+    const studentExists = students.some(student => student.studentId === studentId);
+    
+    if (studentExists) {
+        alert("Student ID already exists. Please use a different ID.");
+        return;
+    }
+
+    
     students.push({ name: studentName, studentId, emailId, contactNumber });
     localStorage.setItem("students", JSON.stringify(students));
 
